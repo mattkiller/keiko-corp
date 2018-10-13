@@ -7,12 +7,6 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
 
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
-	<link rel="stylesheet" type="text/css" href="css/owl.transitions.css"/>
-	<link rel="stylesheet" type="text/css" href="css/owl.carousel.css"/>
-	<link rel="stylesheet" type="text/css" href="css/animate.css"/>
-	<link rel="stylesheet" type="text/css" href="css/main.css"/>
-
 </head>
 <body>
 
@@ -296,6 +290,26 @@
 	<script type="text/javascript" src="js/nicescroll.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 	<script type="text/javascript" src="js/scrollTo.js"></script>
+
+	<script>
+		const loadStyleSheet = src => {
+			const stylesheet = document.createElement('link');
+			stylesheet.href = src;
+			stylesheet.type = 'text/css';
+			stylesheet.rel = 'stylesheet';
+
+			document.getElementsByTagName('head')[0].appendChild(stylesheet);
+		}
+
+		
+		[
+				'css/bootstrap.css',
+				'css/owl.transitions.css',
+				'css/owl.carousel.css',
+				'css/animate.css',
+				'css/main.css'
+			].forEach(loadStyleSheet);
+	</script>
 
 </body>
 </html>
